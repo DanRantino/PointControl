@@ -2,9 +2,7 @@ package com.dio.pointcontrol.model;
 
 import lombok.*;
 
-import javax.persistence.Embeddable;
-import javax.persistence.EmbeddedId;
-import javax.persistence.Entity;
+import javax.persistence.*;
 import java.io.Serializable;
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
@@ -26,11 +24,14 @@ public class Movimentacao {
         private long idMovimento;
         private long idUsuario;
     }
+    @Id
     @EmbeddedId
     private MovimentacaoId movimentacaoId;
     private LocalDateTime dataEntrada;
     private LocalDateTime dataSaida;
     private BigDecimal periodoPermanencia;
+    @ManyToOne
     private Ocorrencia ocorrencia;
+    @ManyToOne
     private Calendario calendario;
 }

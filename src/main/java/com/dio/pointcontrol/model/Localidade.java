@@ -3,6 +3,7 @@ package com.dio.pointcontrol.model;
 import lombok.*;
 
 import javax.persistence.Entity;
+import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 
 @Getter
@@ -13,6 +14,7 @@ import javax.persistence.ManyToOne;
 @Builder
 @Entity
 public class Localidade {
+    @Id
     private long id;
 
     @ManyToOne

@@ -1,8 +1,7 @@
 package com.dio.pointcontrol.model;
 
-import lombok.AllArgsConstructor;
-import lombok.EqualsAndHashCode;
-import lombok.NoArgsConstructor;
+import lombok.*;
+
 
 import javax.persistence.Embeddable;
 import javax.persistence.EmbeddedId;
@@ -15,6 +14,8 @@ import java.time.LocalDateTime;
 @AllArgsConstructor
 @EqualsAndHashCode
 @Embeddable
+@Getter
+@Setter
 @Entity
 public class BancoHoras {
 

@@ -3,6 +3,7 @@ package com.dio.pointcontrol.model;
 import lombok.*;
 
 import javax.persistence.Entity;
+import javax.persistence.Id;
 
 @Getter
 @Setter
@@ -12,6 +13,7 @@ import javax.persistence.Entity;
 @Builder
 @Entity
 public class Ocorrencia {
+    @Id
     private long id;
     private String nome;
     private String ocorrencia;
